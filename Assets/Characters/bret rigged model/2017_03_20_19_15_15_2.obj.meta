@@ -1,47 +1,9 @@
 fileFormatVersion: 2
-guid: 132a3010d8179420e8528a6e0604688b
+guid: a3f5920c921564eb1832d9b5082970cc
 ModelImporter:
   serializedVersion: 20101
-  internalIDToNameTable:
-  - first:
-      74: -203655887218126122
-    second: mixamo.com
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Ch31_body
-    second: {fileID: 2100000, guid: 526baf745dae24ccea6612b9d472863e, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Ch31_hair
-    second: {fileID: 2100000, guid: b841147d1757b456ab8cb13777abe35c, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Ch31_1001_Diffuse
-    second: {fileID: 2800000, guid: fd557a2b505bd47bc82c3434cc12e320, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Ch31_1001_Glossiness
-    second: {fileID: 2800000, guid: e542a013710b34ed68922922b99dab1c, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Ch31_1001_Normal
-    second: {fileID: 2800000, guid: 0d4b75175d64246e69a0edb9ddc1d5f8, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Ch31_1001_Specular
-    second: {fileID: 2800000, guid: a424d43eb2a934cbe8b21afa39d4b676, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Ch31_1002_Diffuse
-    second: {fileID: 2800000, guid: 9bbd4c73946fb420d93693a211cfada1, type: 3}
+  internalIDToNameTable: []
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -110,8 +72,7 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips:
-  - db8726be3ff034af5a219ed3227cb5bb
+  referencedClips: []
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
