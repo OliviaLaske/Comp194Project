@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CountStudents : MonoBehaviour
 {
+    public GameObject Cube;
     public GameObject Zero;
     public GameObject One;
     public GameObject Two;
@@ -16,7 +17,7 @@ public class CountStudents : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Cube.SetActive(true);
     }
 
     // Update is called once per frame
