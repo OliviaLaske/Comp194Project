@@ -1,68 +1,86 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
 
 public class CountStudents : MonoBehaviour
 {
-    public GameObject Canvas;
-    TextMeshPro Numbers;
+    public GameObject Cube;
+    public GameObject Zero;
+    public GameObject One;
+    public GameObject Two;
+    public GameObject Three;
+    public GameObject Four;
+    public GameObject Five;
+    public GameObject Six;
     int Counter = 0;
-
-    IEnumerator WaitForSeconds()
-    {
-        yield return new WaitForSeconds(5.0f);
-    }
 
     // Start is called before the first frame update
     void Start()
     {
-        Numbers = Canvas.GetComponent<TextMeshPro>();
+        Cube.SetActive(true);
     }
 
     // Update is called once per frame
     void Update()
     {
-        for(int i = 0; i < 17; i++)
+        for(int i = 0; i < 5; i++)
         {
-            Counter = 0;
-            Numbers.text = Counter.ToString("0");
+            Zero.SetActive(true);
             if(Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f || Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f)
-            {
+            { 
                 if(Counter == 0)
                 {
+                    Zero.SetActive(false);
+                    One.SetActive(true);
                     Counter = 1;
-                    Numbers.text = Counter.ToString("1");
                 }
-                else if(Counter == 1)
+            }
+            if(Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f || Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f)
+            {
+                if(Counter == 1)
                 {
+                    One.SetActive(false);
+                    Two.SetActive(true);
                     Counter = 2;
-                    Numbers.text = Counter.ToString("2");
                 }
-                else if(Counter == 2)
+            }
+            if(Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f || Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f)
+            {
+                if(Counter == 2)
                 {
+                    Two.SetActive(false);
+                    Three.SetActive(true);
                     Counter = 3;
-                    Numbers.text = Counter.ToString("3");
                 }
-                else if(Counter == 3)
+            }
+            if(Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f || Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f)
+            {
+                if(Counter == 3)
                 {
+                    Three.SetActive(false);
+                    Four.SetActive(true);
                     Counter = 4;
-                    Numbers.text = Counter.ToString("4");
                 }
-                else if(Counter == 4)
+            }
+            if(Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f || Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f)
+            {
+                if(Counter == 4)
                 {
+                    Four.SetActive(false);
+                    Five.SetActive(true);
                     Counter = 5;
-                    Numbers.text = Counter.ToString("5");
                 }
-                else if(Counter == 5)
+            }
+            if(Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f || Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f)
+            {
+                if(Counter == 5)
                 {
-                    Counter = 6;
-                    Numbers.text = Counter.ToString("6");
-                    // play audio
-                    StartCoroutine(WaitForSeconds());
+                    Five.SetActive(false);
+                    Six.SetActive(true);
+                    Counter = 0;
                 }
             }
         }
+
     }
 }
