@@ -1,52 +1,12 @@
 fileFormatVersion: 2
-guid: e0e6723a707a64202939e71613b680e5
+guid: 4032f28c21c53425a8abd54010efa2d4
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable:
   - first:
       74: -203655887218126122
     second: mixamo.com
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Ch22_body
-    second: {fileID: 2100000, guid: 84e79165a551145238fefa97da7ee978, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Ch22_hair
-    second: {fileID: 2100000, guid: 08d6c5f2e3a954fd6a5820fb397a5bcb, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Ch22_1001_Diffuse
-    second: {fileID: 2800000, guid: 9a6b88a906ad143a6a37a82dad4071e8, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Ch22_1001_Glossiness
-    second: {fileID: 2800000, guid: 06749635282474ed6a2d4e313460429a, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Ch22_1001_Normal
-    second: {fileID: 2800000, guid: 111f3c29ad58e43c7826c3036a0a5062, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Ch22_1001_Specular
-    second: {fileID: 2800000, guid: 92dfc08d87fb140adadf77e162a0255e, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Ch22_1002_Diffuse
-    second: {fileID: 2800000, guid: cb278f6b1e1a249a1ac43979cbc0df76, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Ch22_1002_Normal
-    second: {fileID: 2800000, guid: 7a9e8a351a7ef4b37a53112c7b3905a8, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -66,7 +26,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -116,10 +76,10 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips:
-  - cd53fa67fd18d4a84a79fdae711c4b9b
-  - a38a4d482d1b24c5c85e22bb165eb417
-  - 2af4748aa6f3d43c9b7096d6018b10a4
-  - 05c84d1149ea34ab8a91a3e3d45f64aa
+  - 6dba5900564934a33b09b88da596a69f
+  - 12b9297532b8e469b97a40568ebceaa1
+  - 89ea4c174e9b44ef9a2013e681d8ea18
+  - 222179d86ef4048eeb506eca34ffef9b
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
@@ -135,13 +95,13 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 3
+  animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

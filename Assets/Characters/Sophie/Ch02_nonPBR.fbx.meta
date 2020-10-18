@@ -21,32 +21,32 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Ch02_1001_Diffuse
-    second: {fileID: 2800000, guid: baaaa22e3a0594838bbe30cfb195161e, type: 3}
+    second: {fileID: 2800000, guid: b5b6a0fb9f1b645e8b43090776e1dcfa, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Ch02_1001_Glossiness
-    second: {fileID: 2800000, guid: a1972701ceb1a44b7821653de5b5978e, type: 3}
+    second: {fileID: 2800000, guid: ca1777e7af46c4ac997e198baff19b92, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Ch02_1001_Normal
-    second: {fileID: 2800000, guid: 708533224c81744adbadb1329e97b31c, type: 3}
+    second: {fileID: 2800000, guid: f65bd2b160cf049318258c803547bd62, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Ch02_1001_Specular
-    second: {fileID: 2800000, guid: bc010a007079f4576b079972c075190a, type: 3}
+    second: {fileID: 2800000, guid: 7b6e247223ae64e7695bd0233240029c, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Ch02_1002_Diffuse
-    second: {fileID: 2800000, guid: 8aef8a10ad6f14090b136341a89dd0fe, type: 3}
+    second: {fileID: 2800000, guid: a55265edb01d745139a776bb3874e6e6, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Ch02_1002_Normal
-    second: {fileID: 2800000, guid: 2e31e07c9ed42447b88180b46ff7c0f8, type: 3}
+    second: {fileID: 2800000, guid: 2de208f307cd94adca10eec836611dc8, type: 3}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -116,10 +116,10 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips:
-  - dbb033c38f48046dc8c1df978acfa798
-  - d7a1489916a1143048cc5868d503cea6
-  - dfd90e9bb18b04abd86d8c02ef4f7f43
-  - 21bd3f499153b480ab86d0efbeab67ee
+  - 2c2df88557ed54d0e8918e2839ecfef3
+  - abf1f47f0ad70421d844e459fbfaf443
+  - 83008254fb857478ab48707275dc5878
+  - e2806dc42beb54995b2af8b7dd690ad2
   - 90079649e04d745feab3e2036be60548
   importAnimation: 1
   humanDescription:

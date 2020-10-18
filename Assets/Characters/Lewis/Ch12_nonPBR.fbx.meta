@@ -1,42 +1,12 @@
 fileFormatVersion: 2
-guid: 4ae4eef68a4ec4cb6b2be999eacb8434
+guid: 2247429c046cb4f5abcf6c1e8f465986
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable:
   - first:
       74: -203655887218126122
     second: mixamo.com
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Ch12_body
-    second: {fileID: 2100000, guid: f9d62a7b613d244bca0a6ffe79a58fd9, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Ch12_hair
-    second: {fileID: 2100000, guid: 20eabfb6c806f47639f790c7e724738d, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Ch12_1001_Diffuse
-    second: {fileID: 2800000, guid: f974324a0f7474839ba40159df6bbbba, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Ch12_1001_Glossiness
-    second: {fileID: 2800000, guid: c36b5649dfab7437da32d175148bbe5c, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Ch12_1001_Normal
-    second: {fileID: 2800000, guid: 73b6f4632e6ec4d258c93f607b52e039, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Ch12_1001_Specular
-    second: {fileID: 2800000, guid: aa95b05b7dee54246b78d898113ba934, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -56,7 +26,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -106,9 +76,9 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips:
-  - 04b9a5dc0e76e43638a52d2d028f7540
+  - 55b93357b63e041c49d0cfd78178d318
   - 5ebb701405af84dec91378cd33cac914
-  - 05531642fe6884b3692cadfc9ced7d88
+  - b1287e9d9d8d44ef1811efba57e86bed
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
@@ -124,13 +94,13 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 3
+  animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
