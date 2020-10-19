@@ -6,6 +6,8 @@ using TMPro;
 public class CountStudents : MonoBehaviour
 {
     public TextMeshPro Numbers;
+    AudioSource CountingStudentInstructions;
+    AudioSource CountingStudents;
     int Counter = 0;
 
     /*
@@ -18,41 +20,43 @@ public class CountStudents : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        CountingStudentsInstructions = CountingStudentsInstructions.GetComponent<AudioSource>();
+        CountingStudents = CountingStudents.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Counter == 0 && OVRInput.Get(OVRInput.Button.One))
+        if(Counter == 0 && OVRInput.GetDown(OVRInput.Button.One))
         {
             Numbers.text = "1";
             Counter = 1;
         }
-        else if(Counter == 1 && OVRInput.Get(OVRInput.Button.One))
+        else if(Counter == 1 && OVRInput.GetDown(OVRInput.Button.One))
         {
             Numbers.text = "2";
             Counter = 2;
         }
-        else if(Counter == 2 && OVRInput.Get(OVRInput.Button.One))
+        else if(Counter == 2 && OVRInput.GetDown(OVRInput.Button.One))
         {
             Numbers.text = "3";
             Counter = 3;
         }
-        else if(Counter == 3 && OVRInput.Get(OVRInput.Button.One))
+        else if(Counter == 3 && OVRInput.GetDown(OVRInput.Button.One))
         {
             Numbers.text = "4";
             Counter = 4;
         }
-        else if(Counter == 4 && OVRInput.Get(OVRInput.Button.One))
+        else if(Counter == 4 && OVRInput.GetDown(OVRInput.Button.One))
         {
             Numbers.text = "5";
             Counter = 5;
         }
-        else if(Counter == 5 && OVRInput.Get(OVRInput.Button.One))
+        else if(Counter == 5 && OVRInput.GetDown(OVRInput.Button.One))
         {
             Numbers.text = "6";
             Counter = 0;
+            CountingStudents.Play(0);
         }
 
         /*
