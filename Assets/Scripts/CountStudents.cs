@@ -6,8 +6,9 @@ using TMPro;
 public class CountStudents : MonoBehaviour
 {
     public TextMeshPro Numbers;
-    AudioSource CountingStudentInstructions;
-    AudioSource CountingStudents;
+    AudioSource audioSource;
+    public AudioClip countingStudentsInstructions;
+    public AudioClip countingStudents;
     int Counter = 0;
 
     /*
@@ -20,8 +21,9 @@ public class CountStudents : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CountingStudentsInstructions = CountingStudentsInstructions.GetComponent<AudioSource>();
-        CountingStudents = CountingStudents.GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = countingStudentsInstructions;
+        audioSource.Play(0);
     }
 
     // Update is called once per frame
@@ -56,116 +58,8 @@ public class CountStudents : MonoBehaviour
         {
             Numbers.text = "6";
             Counter = 0;
-            CountingStudents.Play(0);
+            audioSource.clip = countingStudents;
+            audioSource.Play(0);
         }
-
-        /*
-        if(Counter == 0 && Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f)
-        {
-            Numbers.text = "1";
-            Counter = 1;
-        }
-        else if(Counter == 1 && Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f)
-        {
-            Numbers.text = "2";
-            Counter = 2;
-        }
-        else if(Counter == 2 && Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f)
-        {
-            Numbers.text = "3";
-            Counter = 3;
-        }
-        else if(Counter == 3 && Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f)
-        {
-            Numbers.text = "4";
-            Counter = 4;
-        }
-        else if(Counter == 4 && Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f)
-        {
-            Numbers.text = "5";
-            Counter = 5;
-        }
-        else if(Counter == 5 && Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f)
-        {
-            Numbers.text = "6";
-            Counter = 0;
-        }
-        */
-
-        /*
-        if(Counter == 0)
-        {
-            if(Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f)
-            {
-                Numbers.text = "1";
-                Counter = 1;
-            }
-        }
-        else if(Counter == 1)
-        {
-            if(Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f)
-            {
-                Numbers.text = "2";
-                Counter = 2;
-            }
-        }
-        */
-
-        /*
-        for(int i = 0; i < 17; i++)
-        {
-            if(Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f)
-            {
-                if(Counter == 0)
-                {
-                    Numbers.text = "1";
-                    Counter = 1;
-                }
-            }
-            if(Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f)
-            {
-                if(Counter == 1)
-                {
-                    Numbers.text = "2";
-                    Counter = 2;
-                }
-            }
-            if(Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f)
-            {
-                if(Counter == 2)
-                {
-                    Numbers.text = "3";
-                    Counter = 3;
-                }
-            }
-            if(Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f)
-            {
-                if(Counter == 3)
-                {
-                    Numbers.text = "4";
-                    Counter = 4;
-                }
-            }
-            if(Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f)
-            {
-                if(Counter == 4)
-                {
-                    Numbers.text = "5";
-                    Counter = 5;
-                }
-            }
-            if(Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f)
-            {
-                if(Counter == 5)
-                {
-                    Numbers.text = "6";
-                    Counter = 6;
-                    // play audio
-                    StartCoroutine(WaitForSeconds());
-                    Numbers.text = "0";
-                }
-            }
-        }
-        */
     }
 }
