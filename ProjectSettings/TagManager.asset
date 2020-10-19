@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Next
   - Pencil
+  - Paper
   layers:
   - Default
   - TransparentFX
