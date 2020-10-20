@@ -5,7 +5,7 @@ using UnityEngine;
 public class DrawCircle1 : MonoBehaviour
 {
     public GameObject graphite;
-    Vector3 graphitePoint = new Vector3(0f, 0f, 0.1f);
+    Vector3 graphitePoint = new Vector3(-0.75f, 0f, 0.1f);
     Vector3 pencilPosition;
     Vector3 drawPoint;
 

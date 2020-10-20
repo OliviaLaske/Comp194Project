@@ -5,7 +5,7 @@ using UnityEngine;
 public class Task2 : MonoBehaviour
 {
     AudioSource audioSource;
-    public AudioClip pencilPlacement; 
+    public GameObject player; 
 
     void OnTriggerEnter (Collider other) 
     { 
@@ -13,8 +13,9 @@ public class Task2 : MonoBehaviour
         {
             float angle = Vector3.Angle(other.transform.forward, transform.forward);
             Debug.Log("Pencil Placed"); 
-            if (angle < 10){
-                audioSource.clip = pencilPlacement;
+            if (angle < 10)
+            {
+                // audioSource.clip = pencilPlacement;
                 audioSource.Play(0); 
             }
         }
@@ -22,12 +23,12 @@ public class Task2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        audioSource = player.GetComponent<AudioSource>();
     }
- //public Transform target;
- void Update()
- {
+    //public Transform target;
+    void Update()
+    {
 
- }
+    }
   
 }
