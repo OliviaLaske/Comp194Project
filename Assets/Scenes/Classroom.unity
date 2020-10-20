@@ -1337,8 +1337,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   graphite: {fileID: 1653716594}
+  circle: {fileID: 977058414}
   incorrectCircle: {fileID: 8300000, guid: 9a57746ee2fd34300a69e262ab82d6c0, type: 3}
-  correctCircle: {fileID: 8300000, guid: fd89e20411bd74be098fa16bac09f9d6, type: 3}
+  pencilPlacementInstructions: {fileID: 8300000, guid: fd89e20411bd74be098fa16bac09f9d6, type: 3}
 --- !u!1001 &307660968
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4172,12 +4173,12 @@ GameObject:
   - component: {fileID: 977058417}
   - component: {fileID: 977058416}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &977058415
 Transform:
   m_ObjectHideFlags: 0
