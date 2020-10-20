@@ -6,9 +6,9 @@ public class DrawCircle2 : MonoBehaviour
 {
     public GameObject graphite;
     public GameObject circle;
-    public GameObject player;
-    public GameObject desk;
-    public GameObject numbers;
+    // public GameObject player;
+    // public GameObject desk;
+    // public GameObject numbers;
     AudioSource audioSource;
     public AudioClip incorrectCircle;
     public AudioClip pencilPlacementInstructions;
@@ -57,9 +57,9 @@ public class DrawCircle2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player.GetComponent<CountStudents>().enable = false;
-        desk.GetComponent<Task2>().enable = false;
-        numbers.SetActive(false);
+        // player.GetComponent<CountStudents>().enable = false;
+        // desk.GetComponent<Task2>().enable = false;
+        // numbers.SetActive(false);
         audioSource = GetComponent<AudioSource>();
         circle.SetActive(false);
     }
@@ -202,7 +202,7 @@ public class DrawCircle2 : MonoBehaviour
                 audioSource.Play(0);
                 StartCoroutine(WaitForSeconds1());
                 circle.SetActive(false);
-                desk.GetComponent<Task2>().enable = true;
+                // desk.GetComponent<Task2>().enable = true;
             }
         }
 

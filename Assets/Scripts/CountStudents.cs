@@ -5,16 +5,19 @@ using TMPro;
 
 public class CountStudents : MonoBehaviour
 {
-    public TextMeshPro Numbers;
+    public TextMeshPro numbers;
     AudioSource audioSource;
     public AudioClip countingStudentsInstructions;
     public AudioClip countingStudents;
-    int Counter = 0;
+    int counter = 0;
+    // public GameObject desk;
 
     // Start is called before the first frame update
     void Start()
     {
+        // desk.GetComponent<Task2>().enable = false;
         audioSource = GetComponent<AudioSource>();
+        // numbers.SetActive(true);
         audioSource.clip = countingStudentsInstructions;
         audioSource.Play(0);
     }
@@ -22,35 +25,35 @@ public class CountStudents : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Counter == 0 && OVRInput.GetDown(OVRInput.Button.One))
+        if(counter == 0 && OVRInput.GetDown(OVRInput.Button.One))
         {
-            Numbers.text = "1";
-            Counter = 1;
+            numbers.text = "1";
+            counter = 1;
         }
-        else if(Counter == 1 && OVRInput.GetDown(OVRInput.Button.One))
+        else if(counter == 1 && OVRInput.GetDown(OVRInput.Button.One))
         {
-            Numbers.text = "2";
-            Counter = 2;
+            numbers.text = "2";
+            counter = 2;
         }
-        else if(Counter == 2 && OVRInput.GetDown(OVRInput.Button.One))
+        else if(counter == 2 && OVRInput.GetDown(OVRInput.Button.One))
         {
-            Numbers.text = "3";
-            Counter = 3;
+            numbers.text = "3";
+            counter = 3;
         }
-        else if(Counter == 3 && OVRInput.GetDown(OVRInput.Button.One))
+        else if(counter == 3 && OVRInput.GetDown(OVRInput.Button.One))
         {
-            Numbers.text = "4";
-            Counter = 4;
+            numbers.text = "4";
+            counter = 4;
         }
-        else if(Counter == 4 && OVRInput.GetDown(OVRInput.Button.One))
+        else if(counter == 4 && OVRInput.GetDown(OVRInput.Button.One))
         {
-            Numbers.text = "5";
-            Counter = 5;
+            numbers.text = "5";
+            counter = 5;
         }
-        else if(Counter == 5 && OVRInput.GetDown(OVRInput.Button.One))
+        else if(counter == 5 && OVRInput.GetDown(OVRInput.Button.One))
         {
-            Numbers.text = "6";
-            Counter = 0;
+            numbers.text = "6";
+            counter = 0;
             audioSource.clip = countingStudents;
             audioSource.Play(0);
         }
