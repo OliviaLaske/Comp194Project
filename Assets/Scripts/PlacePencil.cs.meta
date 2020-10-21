@@ -3,7 +3,13 @@ guid: 8b00385021b584d6281c4690d3e04ded
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - correctPencilPlacement: {instanceID: 0}
+  - countingStudentsInstructions: {instanceID: 0}
+  - countingStudents: {instanceID: 0}
+  - pencil: {instanceID: 0}
+  - numbers: {instanceID: 0}
+  - desk: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

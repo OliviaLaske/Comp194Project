@@ -19,12 +19,9 @@ public class DrawCircle : MonoBehaviour
 
     IEnumerator WaitForSeconds()
     {
-        yield return new WaitForSeconds(3.0f);
-    }
-
-    IEnumerator WaitForSeconds1()
-    {
         yield return new WaitForSeconds(6.312f);
+        circle.SetActive(false);
+        counter++;
     }
 
     // Start is called before the first frame update
@@ -51,7 +48,6 @@ public class DrawCircle : MonoBehaviour
             }
             else
             {
-                // StartCoroutine(WaitForSeconds());
                 graphite.GetComponent<TrailRenderer>().Clear();
                 graphite.GetComponent<TrailRenderer>().enabled = false;
                 if(isDrawing == true)
@@ -70,9 +66,7 @@ public class DrawCircle : MonoBehaviour
                 circle.SetActive(true);
                 audioSource.clip = pencilPlacementInstructions;
                 audioSource.Play(0);
-                // StartCoroutine(WaitForSeconds1());
-                circle.SetActive(true);
-                counter++;
+                StartCoroutine(WaitForSeconds());
                 // desk.GetComponent<PlacePencil>().enable = true;
             }
         }

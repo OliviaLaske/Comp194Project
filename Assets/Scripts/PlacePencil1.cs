@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class PlacePencil : MonoBehaviour
+public class PlacePencil1 : MonoBehaviour
 {
     AudioSource audioSource;
     public AudioClip incorrectPencilPlacement;
@@ -11,17 +11,16 @@ public class PlacePencil : MonoBehaviour
     public AudioClip countingStudentsInstructions;
     public AudioClip countingStudents;
     // public GameObject player; 
-    public GameObject pencil;
+    // public GameObject pencil;
     bool isPencilPlaced;
     public TextMeshPro numbers;
-    public GameObject desk;
+    // public GameObject desk;
     int counter = 0;
 
-    IEnumerator PlayClips()
+    IEnumerator WaitForSeconds()
     {
-        audioSource.clip = correctPencilPlacement;
-        audioSource.Play(0); 
         yield return new WaitForSeconds(6.0f);
+        audioSource = GetComponent<AudioSource>();
         numbers.text = "0";
         audioSource.clip = countingStudentsInstructions;
         audioSource.Play(0);
@@ -30,23 +29,17 @@ public class PlacePencil : MonoBehaviour
 
     void OnTriggerEnter (Collider other) 
     { 
-        if (other.gameObject.tag == "Pencil")
+        if (other.gameObject.name == "Pencil")
         {
-            float angle = Vector3.Angle(other.transform.position + new Vector3(0, 0, -1), transform.forward);
+            float angle = Vector3.Angle(other.transform.forward, transform.forward);
             Debug.Log("Pencil Placed"); 
             if (angle < 10)
             {
-                pencil.transform.parent = desk.transform;
-                StartCoroutine(PlayClips());
-                // pencil.DetachFromParent 
-                // StartCoroutine(WaitForSeconds());
+                audioSource.clip = correctPencilPlacement;
+                audioSource.Play(0); 
+                StartCoroutine(WaitForSeconds());
                 // player.GetComponent<CountStudents>().enable = true;
                 // desk.GetComponent<PlacePencil>().enable = false;
-                // audioSource = GetComponent<AudioSource>();
-                // numbers.text = "0";
-                // audioSource.clip = countingStudentsInstructions;
-                // audioSource.Play(0);
-                // isPencilPlaced = true;
             }
             else
             {
@@ -56,24 +49,43 @@ public class PlacePencil : MonoBehaviour
             }
         }
     }
-
     // Start is called before the first frame update
     void Start()
     {
         // pencil.GetComponent<DrawCircle>().enable = false;
         audioSource = GetComponent<AudioSource>();
     }
-    //public Transform target;
+    
     void Update()
     {
-        if(isPencilPlaced == true && OVRInput.GetDown(OVRInput.Button.One))
+        if(isPencilPlaced == true)
         {
-            if(counter < 5)
+            if(counter == 0 && OVRInput.GetDown(OVRInput.Button.One))
             {
-                counter++;
-                numbers.text = "" + counter;
+                numbers.text = "1";
+                counter = 1;
             }
-            else if(counter == 5)
+            else if(counter == 1 && OVRInput.GetDown(OVRInput.Button.One))
+            {
+                numbers.text = "2";
+                counter = 2;
+            }
+            else if(counter == 2 && OVRInput.GetDown(OVRInput.Button.One))
+            {
+                numbers.text = "3";
+                counter = 3;
+            }
+            else if(counter == 3 && OVRInput.GetDown(OVRInput.Button.One))
+            {
+                numbers.text = "4";
+                counter = 4;
+            }
+            else if(counter == 4 && OVRInput.GetDown(OVRInput.Button.One))
+            {
+                numbers.text = "5";
+                counter = 5;
+            }
+            else if(counter == 5 && OVRInput.GetDown(OVRInput.Button.One))
             {
                 numbers.text = "6";
                 counter = 0;
