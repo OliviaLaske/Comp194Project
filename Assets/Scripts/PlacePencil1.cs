@@ -30,7 +30,7 @@ public class PlacePencil1 : MonoBehaviour
 
     void OnTriggerEnter (Collider other) 
     { 
-        if (other.gameObject.name == "Pencil")
+        if(other.gameObject.name == "Pencil")
         {
             float angle = Vector3.Angle(other.transform.forward, Vector3.back);
             Debug.Log("Pencil Placed"); 
@@ -55,7 +55,6 @@ public class PlacePencil1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // pencil.GetComponent<DrawCircle>().enable = false;
         audioSource = GetComponent<AudioSource>();
     }
     

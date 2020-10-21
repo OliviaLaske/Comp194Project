@@ -8,6 +8,8 @@ public class DrawCircle1 : MonoBehaviour
     public GameObject graphite;
     public GameObject circle;
     public GameObject desk;
+    public GameObject left;
+    public GameObject up;
     public TextMeshPro numbers;
     public TextMeshPro instructions;
     AudioSource audioSource;
@@ -27,6 +29,8 @@ public class DrawCircle1 : MonoBehaviour
         yield return new WaitForSeconds(6.312f);
         circle.SetActive(false);
         desk.SetActive(true);
+        left.SetActive(true);
+        up.SetActive(true);
     }
 
     // Start is called before the first frame update
@@ -35,6 +39,8 @@ public class DrawCircle1 : MonoBehaviour
         numbers.text = " ";
         instructions.text = "Press right trigger to draw";
         desk.SetActive(false);
+        left.SetActive(false);
+        up.SetActive(false);
         circle.SetActive(false);
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = circleInstructions;
