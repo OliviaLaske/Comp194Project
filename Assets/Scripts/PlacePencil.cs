@@ -28,7 +28,6 @@ public class PlacePencil : MonoBehaviour
         isPencilPlaced = true;
     }
 
-    /*
     void OnTriggerEnter (Collider other) 
     { 
         if (other.gameObject.tag == "Pencil")
@@ -57,7 +56,6 @@ public class PlacePencil : MonoBehaviour
             }
         }
     }
-    */
 
     // Start is called before the first frame update
     void Start()
