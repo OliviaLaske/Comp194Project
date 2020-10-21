@@ -10,6 +10,7 @@ public class PlacePencil1 : MonoBehaviour
     public AudioClip correctPencilPlacement;
     public AudioClip countingStudentsInstructions;
     public AudioClip countingStudents;
+    public AudioClip countingStudentsEnd;
     public GameObject pencil;
     bool isPencilPlaced = false;
     public TextMeshPro numbers;
@@ -36,13 +37,10 @@ public class PlacePencil1 : MonoBehaviour
             Debug.Log("Pencil Placed"); 
             if (angle < 10)
             {
-                // pencil.transform.parent = desk.transform;
                 Destroy(pencil);
                 audioSource.clip = correctPencilPlacement;
                 audioSource.Play(0); 
                 StartCoroutine(WaitForSeconds());
-                // player.GetComponent<CountStudents>().enable = true;
-                // desk.GetComponent<PlacePencil>().enable = false;
             }
             else
             {
@@ -91,9 +89,15 @@ public class PlacePencil1 : MonoBehaviour
             else if(counter == 5 && OVRInput.GetDown(OVRInput.Button.One))
             {
                 numbers.text = "6";
-                counter = 0;
+                counter = 6;
                 audioSource.clip = countingStudents;
                 audioSource.Play(0);
+            }
+            else if(counter == 6 && OVRInput.GetDown(OVRInput.Button.One))
+            {
+                audioSource.clip = countingStudentsEnd;
+                audioSource.Play(0);
+                instructions.text = "Task completed";
             }
         }
     }
