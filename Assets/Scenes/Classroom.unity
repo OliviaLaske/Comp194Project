@@ -795,11 +795,6 @@ Transform:
   m_Father: {fileID: 469794368}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &197881971 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1844930292423774, guid: 991e8973513e2ad408232c1afeb3a9df, type: 3}
-  m_PrefabInstance: {fileID: 1186207383}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &198705590
 GameObject:
   m_ObjectHideFlags: 0
@@ -1197,20 +1192,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1217707077934046, guid: acd1035e6037f5340b25cdc9d4460022, type: 3}
   m_PrefabInstance: {fileID: 283311186}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &283311189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 283311188}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3537cdbd0f444709a1c455d1ea0ca9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  desk: {fileID: 197881971}
-  correctPencilPosition: {fileID: 8300000, guid: b2e877089c31c446bbe6334a00481c95, type: 3}
 --- !u!82 &283311190
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1338,6 +1319,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   graphite: {fileID: 1653716594}
   circle: {fileID: 977058414}
+  numbers: {fileID: 1010088499}
+  circleInstructions: {fileID: 8300000, guid: f9c882014b69446a3a0c20227fbb24c2, type: 3}
   incorrectCircle: {fileID: 8300000, guid: 9a57746ee2fd34300a69e262ab82d6c0, type: 3}
   pencilPlacementInstructions: {fileID: 8300000, guid: fd89e20411bd74be098fa16bac09f9d6, type: 3}
 --- !u!1001 &307660968
@@ -2267,122 +2250,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 459718, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
   m_PrefabInstance: {fileID: 566327639}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &566327641 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100004, guid: 126d619cf4daa52469682f85c1378b4a, type: 3}
-  m_PrefabInstance: {fileID: 566327639}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &566327642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 566327641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e71279c5c55274e22bfe2da3167f965b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Numbers: {fileID: 1010088499}
-  countingStudentsInstructions: {fileID: 8300000, guid: 8ddcbe780022d4c87b7743fcbaa7425a, type: 3}
-  countingStudents: {fileID: 8300000, guid: fc4ec76f79c294cb89a9e8e09b1327de, type: 3}
---- !u!82 &566327643
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 566327641}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 099163aaa02074dbb9cf476c0530d288, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1001 &585814679
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2494,7 +2361,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b00385021b584d6281c4690d3e04ded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 566327641}
+  correctPencilPlacement: {fileID: 8300000, guid: b2e877089c31c446bbe6334a00481c95, type: 3}
+  countingStudentsInstructions: {fileID: 8300000, guid: ea0657c8a18ac4e26a64f98e6f11d5f5, type: 3}
+  countingStudents: {fileID: 8300000, guid: 210b9aa79810e47a7b5f731682fb2e60, type: 3}
+  pencil: {fileID: 283311188}
+  numbers: {fileID: 1010088499}
 --- !u!65 &593652919
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2518,7 +2389,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 15197fb7abbc54767b264469cfd143f4, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b2e877089c31c446bbe6334a00481c95, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -4178,7 +4049,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &977058415
 Transform:
   m_ObjectHideFlags: 0
@@ -4448,7 +4319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e71279c5c55274e22bfe2da3167f965b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Numbers: {fileID: 1010088499}
+  numbers: {fileID: 0}
   countingStudentsInstructions: {fileID: 8300000, guid: ea0657c8a18ac4e26a64f98e6f11d5f5, type: 3}
   countingStudents: {fileID: 8300000, guid: 210b9aa79810e47a7b5f731682fb2e60, type: 3}
 --- !u!1 &1019312514
@@ -5945,7 +5816,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b00385021b584d6281c4690d3e04ded, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 566327641}
+  correctPencilPlacement: {fileID: 8300000, guid: b2e877089c31c446bbe6334a00481c95, type: 3}
+  countingStudentsInstructions: {fileID: 8300000, guid: ea0657c8a18ac4e26a64f98e6f11d5f5, type: 3}
+  countingStudents: {fileID: 8300000, guid: 210b9aa79810e47a7b5f731682fb2e60, type: 3}
+  pencil: {fileID: 0}
+  numbers: {fileID: 1010088499}
 --- !u!82 &1389833826
 AudioSource:
   m_ObjectHideFlags: 0

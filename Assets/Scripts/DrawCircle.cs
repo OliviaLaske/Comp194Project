@@ -1,63 +1,207 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class DrawCircle : MonoBehaviour
 {
-    public OVRInput.Controller controller;
-    private LineRenderer lineRenderer;
-    private GameObject drawPoint;
-    private GameObject lineRendererParent;
+    public GameObject graphite;
+    public GameObject circle;
+    // public GameObject player;
+    // public GameObject desk;
+    public TextMeshPro numbers;
+    AudioSource audioSource;
+    public AudioClip circleInstructions;
+    public AudioClip incorrectCircle;
+    public AudioClip pencilPlacementInstructions;
+    bool isDrawing = false;
+    int counter = 0;
 
-    private bool drawing;
-    
-    public Transform RightHandAnchor; // Potentially Transform class?
-   // public GameObject pencil;
-
-   Vector3 startPoint;
-
-    void start()
+    IEnumerator WaitForSeconds()
     {
-        lineRenderer = RightHandAnchor.GetComponent<LineRenderer>();
+        yield return new WaitForSeconds(3.0f);
     }
-    private void Drawing()
+
+    IEnumerator WaitForSeconds1()
     {
-        if (Input.GetAxis("Oculus_CrossPlatform_PrimaryHandTrigger")>0.2f)
+        yield return new WaitForSeconds(6.312f);
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        // player.GetComponent<CountStudents>().enable = false;
+        // desk.GetComponent<PlacePencil>().enable = false;
+        numbers.text = " ";
+        circle.SetActive(false);
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = circleInstructions;
+        audioSource.Play(0);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(counter == 0)
         {
-           // Drawing();
-            drawing = true;
-            lineRendererParent = new GameObject();
-            lineRendererParent.transform.position = transform.position;
-            lineRenderer = lineRendererParent.AddComponent<LineRenderer>();
-            lineRenderer.startWidth = 0.01f;
-            
-            Ray ray = new Ray(transform.position, transform.forward);
-            RaycastHit hit;
-            if(Physics.Raycast(ray, out hit, 1.0f))
+            if(Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f)
             {
-                if(hit.transform.tag == "Paper")
-                {
-                    startPoint = hit.point;
-                    lineRenderer.SetPosition(0, startPoint);
-                    if(drawing == true)
-                    {
-                        lineRenderer.SetPosition(1, hit.point);
-                    }
-                }
+                graphite.GetComponent<TrailRenderer>().enabled = true;
+                isDrawing = true;
             }
-            
-           // lineRenderer.SetPosition(0, drawPoint.transform.position);
-            // lineRenderer.SetPosition(1, hit.point); // drawPoint.transform.position);
+            else
+            {
+                StartCoroutine(WaitForSeconds());
+                graphite.GetComponent<TrailRenderer>().Clear();
+                graphite.GetComponent<TrailRenderer>().enabled = false;
+                if(isDrawing == true)
+                {
+                    audioSource.clip = incorrectCircle;
+                    audioSource.Play(0);
+                    counter = 1;
+                }
+                isDrawing = false;
+            }
         }
-            // if (drawing == true)
-            // {
-                // lineRenderer.SetPosition(lineRenderer.positionCount++, drawPoint.transform.position);
-            // }
-
-            // if(drawing == true)
-            // {
-                // lineRenderer.SetPosition(1, hit.point);
-            // }
+       /*
+        else if(counter == 1)
+        {
+            if(Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f)
+            {
+                graphite.GetComponent<TrailRenderer>().enabled = true;
+                isDrawing = true;
+            }
+            else
+            {
+                StartCoroutine(WaitForSeconds());
+                graphite.GetComponent<TrailRenderer>().Clear();
+                graphite.GetComponent<TrailRenderer>().enabled = false;
+                if(isDrawing == true)
+                {
+                    audioSource.clip = incorrectCircle;
+                    audioSource.Play(0);
+                    counter = 2;
+                }
+                isDrawing = false;
+            }
+        }
+        else if(counter == 2)
+        {
+            if(Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f)
+            {
+                graphite.GetComponent<TrailRenderer>().enabled = true;
+                isDrawing = true;
+            }
+            else
+            {
+                StartCoroutine(WaitForSeconds());
+                graphite.GetComponent<TrailRenderer>().Clear();
+                graphite.GetComponent<TrailRenderer>().enabled = false;
+                if(isDrawing == true)
+                {
+                    audioSource.clip = incorrectCircle;
+                    audioSource.Play(0);
+                    counter = 3;
+                }
+                isDrawing = false;
+            }
+        }
+        else if(counter == 3)
+        {
+            if(Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f)
+            {
+                graphite.GetComponent<TrailRenderer>().enabled = true;
+                isDrawing = true;
+            }
+            else
+            {
+                StartCoroutine(WaitForSeconds());
+                graphite.GetComponent<TrailRenderer>().Clear();
+                graphite.GetComponent<TrailRenderer>().enabled = false;
+                if(isDrawing == true)
+                {
+                    audioSource.clip = incorrectCircle;
+                    audioSource.Play(0);
+                    counter = 4;
+                }
+                isDrawing = false;
+            }
+        }
+        else if(counter == 4)
+        {
+            if(Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f)
+            {
+                graphite.GetComponent<TrailRenderer>().enabled = true;
+                isDrawing = true;
+            }
+            else
+            {
+                StartCoroutine(WaitForSeconds());
+                graphite.GetComponent<TrailRenderer>().Clear();
+                graphite.GetComponent<TrailRenderer>().enabled = false;
+                if(isDrawing == true)
+                {
+                    audioSource.clip = incorrectCircle;
+                    audioSource.Play(0);
+                    counter = 5;
+                }
+                isDrawing = false;
+            }
+        }
+        else if(counter == 5)
+        {
+            if(Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f)
+            {
+                graphite.GetComponent<TrailRenderer>().enabled = true;
+                isDrawing = true;
+            }
+            else
+            {
+                StartCoroutine(WaitForSeconds());
+                graphite.GetComponent<TrailRenderer>().Clear();
+                graphite.GetComponent<TrailRenderer>().enabled = false;
+                if(isDrawing == true)
+                {
+                    audioSource.clip = incorrectCircle;
+                    audioSource.Play(0);
+                    counter = 6;
+                }
+                isDrawing = false;
+            }
+        }
+        */
+        else if(counter > 1 && counter < 6)
+        {
+            if(Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f)
+            {
+                graphite.GetComponent<TrailRenderer>().enabled = true;
+                isDrawing = true;
+            }
+            else
+            {
+                StartCoroutine(WaitForSeconds());
+                graphite.GetComponent<TrailRenderer>().Clear();
+                graphite.GetComponent<TrailRenderer>().enabled = false;
+                if(isDrawing == true)
+                {
+                    audioSource.clip = incorrectCircle;
+                    audioSource.Play(0);
+                    counter++;
+                }
+                isDrawing = false;
+            }
+        }
+        else if(counter == 6)
+        {
+            if(Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f)
+            {
+                circle.SetActive(true);
+                audioSource.clip = pencilPlacementInstructions;
+                audioSource.Play(0);
+                StartCoroutine(WaitForSeconds1());
+                circle.SetActive(false);
+                // desk.GetComponent<PlacePencil>().enable = true;
+            }
+        }
     }
-
 }
