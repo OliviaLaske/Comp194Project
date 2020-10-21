@@ -42,7 +42,7 @@ public class DrawCircle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(counter == 0)
+        if(counter < 6)
         {
             if(Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f)
             {
@@ -51,135 +51,7 @@ public class DrawCircle : MonoBehaviour
             }
             else
             {
-                StartCoroutine(WaitForSeconds());
-                graphite.GetComponent<TrailRenderer>().Clear();
-                graphite.GetComponent<TrailRenderer>().enabled = false;
-                if(isDrawing == true)
-                {
-                    audioSource.clip = incorrectCircle;
-                    audioSource.Play(0);
-                    counter = 1;
-                }
-                isDrawing = false;
-            }
-        }
-       /*
-        else if(counter == 1)
-        {
-            if(Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f)
-            {
-                graphite.GetComponent<TrailRenderer>().enabled = true;
-                isDrawing = true;
-            }
-            else
-            {
-                StartCoroutine(WaitForSeconds());
-                graphite.GetComponent<TrailRenderer>().Clear();
-                graphite.GetComponent<TrailRenderer>().enabled = false;
-                if(isDrawing == true)
-                {
-                    audioSource.clip = incorrectCircle;
-                    audioSource.Play(0);
-                    counter = 2;
-                }
-                isDrawing = false;
-            }
-        }
-        else if(counter == 2)
-        {
-            if(Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f)
-            {
-                graphite.GetComponent<TrailRenderer>().enabled = true;
-                isDrawing = true;
-            }
-            else
-            {
-                StartCoroutine(WaitForSeconds());
-                graphite.GetComponent<TrailRenderer>().Clear();
-                graphite.GetComponent<TrailRenderer>().enabled = false;
-                if(isDrawing == true)
-                {
-                    audioSource.clip = incorrectCircle;
-                    audioSource.Play(0);
-                    counter = 3;
-                }
-                isDrawing = false;
-            }
-        }
-        else if(counter == 3)
-        {
-            if(Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f)
-            {
-                graphite.GetComponent<TrailRenderer>().enabled = true;
-                isDrawing = true;
-            }
-            else
-            {
-                StartCoroutine(WaitForSeconds());
-                graphite.GetComponent<TrailRenderer>().Clear();
-                graphite.GetComponent<TrailRenderer>().enabled = false;
-                if(isDrawing == true)
-                {
-                    audioSource.clip = incorrectCircle;
-                    audioSource.Play(0);
-                    counter = 4;
-                }
-                isDrawing = false;
-            }
-        }
-        else if(counter == 4)
-        {
-            if(Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f)
-            {
-                graphite.GetComponent<TrailRenderer>().enabled = true;
-                isDrawing = true;
-            }
-            else
-            {
-                StartCoroutine(WaitForSeconds());
-                graphite.GetComponent<TrailRenderer>().Clear();
-                graphite.GetComponent<TrailRenderer>().enabled = false;
-                if(isDrawing == true)
-                {
-                    audioSource.clip = incorrectCircle;
-                    audioSource.Play(0);
-                    counter = 5;
-                }
-                isDrawing = false;
-            }
-        }
-        else if(counter == 5)
-        {
-            if(Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f)
-            {
-                graphite.GetComponent<TrailRenderer>().enabled = true;
-                isDrawing = true;
-            }
-            else
-            {
-                StartCoroutine(WaitForSeconds());
-                graphite.GetComponent<TrailRenderer>().Clear();
-                graphite.GetComponent<TrailRenderer>().enabled = false;
-                if(isDrawing == true)
-                {
-                    audioSource.clip = incorrectCircle;
-                    audioSource.Play(0);
-                    counter = 6;
-                }
-                isDrawing = false;
-            }
-        }
-        */
-        else if(counter > 1 && counter < 6)
-        {
-            if(Input.GetAxis("Oculus_CrossPlatform_SecondaryIndexTrigger") > 0.2f)
-            {
-                graphite.GetComponent<TrailRenderer>().enabled = true;
-                isDrawing = true;
-            }
-            else
-            {
-                StartCoroutine(WaitForSeconds());
+                // StartCoroutine(WaitForSeconds());
                 graphite.GetComponent<TrailRenderer>().Clear();
                 graphite.GetComponent<TrailRenderer>().enabled = false;
                 if(isDrawing == true)
@@ -198,8 +70,8 @@ public class DrawCircle : MonoBehaviour
                 circle.SetActive(true);
                 audioSource.clip = pencilPlacementInstructions;
                 audioSource.Play(0);
-                StartCoroutine(WaitForSeconds1());
-                circle.SetActive(false);
+                // StartCoroutine(WaitForSeconds1());
+                circle.SetActive(true);
                 // desk.GetComponent<PlacePencil>().enable = true;
             }
         }
