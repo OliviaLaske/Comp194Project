@@ -28,6 +28,7 @@ public class PlacePencil : MonoBehaviour
         isPencilPlaced = true;
     }
 
+    /*
     void OnTriggerEnter (Collider other) 
     { 
         if (other.gameObject.tag == "Pencil")
@@ -56,6 +57,7 @@ public class PlacePencil : MonoBehaviour
             }
         }
     }
+    */
 
     // Start is called before the first frame update
     void Start()
@@ -66,7 +68,8 @@ public class PlacePencil : MonoBehaviour
     //public Transform target;
     void Update()
     {
-        if(isPencilPlaced == true && OVRInput.GetDown(OVRInput.Button.One))
+        // if(isPencilPlaced == true && OVRInput.GetDown(OVRInput.Button.One))
+        if(OVRInput.GetDown(OVRInput.Button.One))
         {
             if(counter < 5)
             {

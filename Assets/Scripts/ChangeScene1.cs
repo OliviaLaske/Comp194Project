@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene1 : MonoBehaviour
 {
+    public int index;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+    
     }
 
     // Update is called once per frame
@@ -16,7 +18,7 @@ public class ChangeScene1 : MonoBehaviour
     {
         if(OVRInput.GetDown(OVRInput.Button.Two))
         {
-            SceneManager.LoadScene("Classroom", LoadSceneMode.Single);
+            SceneManager.LoadScene(index);
         }
     }
 }
