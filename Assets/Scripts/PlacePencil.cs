@@ -63,7 +63,7 @@ public class PlacePencil : MonoBehaviour
         // pencil.GetComponent<DrawCircle>().enable = false;
         audioSource = GetComponent<AudioSource>();
     }
-    //public Transform target;
+    
     void Update()
     {
         // if(isPencilPlaced == true && OVRInput.GetDown(OVRInput.Button.One))

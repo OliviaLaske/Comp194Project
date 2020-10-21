@@ -7,9 +7,9 @@ public class DrawCircle1 : MonoBehaviour
 {
     public GameObject graphite;
     public GameObject circle;
-    // public GameObject player;
-    // public GameObject desk;
+    public GameObject desk;
     public TextMeshPro numbers;
+    public TextMeshPro instructions;
     AudioSource audioSource;
     public AudioClip circleInstructions;
     public AudioClip incorrectCircle;
@@ -21,6 +21,7 @@ public class DrawCircle1 : MonoBehaviour
     {
         yield return new WaitForSeconds(6.312f);
         circle.SetActive(false);
+        desk.SetActive(true);
     }
 
     // Start is called before the first frame update
@@ -29,9 +30,12 @@ public class DrawCircle1 : MonoBehaviour
         // player.GetComponent<CountStudents>().enable = false;
         // desk.GetComponent<PlacePencil>().enable = false;
         numbers.text = " ";
+        instructions.text = "Press right trigger to draw";
+        desk.SetActive(false);
         circle.SetActive(false);
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = circleInstructions;
+        audioSource.Play(0);
     }
 
     // Update is called once per frame
@@ -52,6 +56,7 @@ public class DrawCircle1 : MonoBehaviour
                 {
                     audioSource.clip = incorrectCircle;
                     audioSource.Play(0);
+                    instructions.text = " ";
                     counter = 1;
                 }
                 isDrawing = false;
@@ -165,7 +170,6 @@ public class DrawCircle1 : MonoBehaviour
                 audioSource.clip = pencilPlacementInstructions;
                 audioSource.Play(0);
                 StartCoroutine(WaitForSeconds());
-                // desk.GetComponent<PlacePencil>().enable = true;
             }
         }
     }

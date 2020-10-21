@@ -11,16 +11,18 @@ public class PlacePencil1 : MonoBehaviour
     public AudioClip countingStudentsInstructions;
     public AudioClip countingStudents;
     // public GameObject player; 
-    // public GameObject pencil;
-    bool isPencilPlaced;
+    public GameObject pencil;
+    bool isPencilPlaced = false;
     public TextMeshPro numbers;
-    // public GameObject desk;
+    public TextMeshPro instructions;
+    public GameObject desk;
     int counter = 0;
 
     IEnumerator WaitForSeconds()
     {
         yield return new WaitForSeconds(6.0f);
         audioSource = GetComponent<AudioSource>();
+        instructions.text = "Press A to count students";
         numbers.text = "0";
         audioSource.clip = countingStudentsInstructions;
         audioSource.Play(0);
@@ -31,10 +33,12 @@ public class PlacePencil1 : MonoBehaviour
     { 
         if (other.gameObject.name == "Pencil")
         {
-            float angle = Vector3.Angle(other.transform.forward, transform.forward);
+            float angle = Vector3.Angle(other.transform.forward, Vector3.back);
             Debug.Log("Pencil Placed"); 
             if (angle < 10)
             {
+                // pencil.transform.parent = desk.transform;
+                Destroy(pencil);
                 audioSource.clip = correctPencilPlacement;
                 audioSource.Play(0); 
                 StartCoroutine(WaitForSeconds());
@@ -64,6 +68,7 @@ public class PlacePencil1 : MonoBehaviour
             {
                 numbers.text = "1";
                 counter = 1;
+                instructions.text = " ";
             }
             else if(counter == 1 && OVRInput.GetDown(OVRInput.Button.One))
             {
