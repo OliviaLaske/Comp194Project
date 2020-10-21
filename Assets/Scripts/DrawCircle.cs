@@ -72,6 +72,7 @@ public class DrawCircle : MonoBehaviour
                 audioSource.Play(0);
                 // StartCoroutine(WaitForSeconds1());
                 circle.SetActive(true);
+                counter++;
                 // desk.GetComponent<PlacePencil>().enable = true;
             }
         }

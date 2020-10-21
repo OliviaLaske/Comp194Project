@@ -32,7 +32,7 @@ public class PlacePencil : MonoBehaviour
                 // pencil.DetachFromParent
                 audioSource.clip = correctPencilPlacement;
                 audioSource.Play(0); 
-                StartCoroutine(WaitForSeconds());
+                // StartCoroutine(WaitForSeconds());
                 // player.GetComponent<CountStudents>().enable = true;
                 // desk.GetComponent<PlacePencil>().enable = false;
                 // audioSource = GetComponent<AudioSource>();
@@ -57,34 +57,14 @@ public class PlacePencil : MonoBehaviour
     //public Transform target;
     void Update()
     {
-        if(isPencilPlaced == true)
+        if(isPencilPlaced == true && OVRInput.GetDown(OVRInput.Button.One))
         {
-            if(counter == 0 && OVRInput.GetDown(OVRInput.Button.One))
+            if(counter < 5)
             {
-                numbers.text = "1";
-                counter = 1;
+                counter++;
+                numbers.text = "" + counter;
             }
-            else if(counter == 1 && OVRInput.GetDown(OVRInput.Button.One))
-            {
-                numbers.text = "2";
-                counter = 2;
-            }
-            else if(counter == 2 && OVRInput.GetDown(OVRInput.Button.One))
-            {
-                numbers.text = "3";
-                counter = 3;
-            }
-            else if(counter == 3 && OVRInput.GetDown(OVRInput.Button.One))
-            {
-                numbers.text = "4";
-                counter = 4;
-            }
-            else if(counter == 4 && OVRInput.GetDown(OVRInput.Button.One))
-            {
-                numbers.text = "5";
-                counter = 5;
-            }
-            else if(counter == 5 && OVRInput.GetDown(OVRInput.Button.One))
+            else if(counter == 5)
             {
                 numbers.text = "6";
                 counter = 0;
