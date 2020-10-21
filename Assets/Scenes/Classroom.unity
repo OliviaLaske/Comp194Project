@@ -841,11 +841,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   graphite: {fileID: 1653716594}
   circle: {fileID: 977058414}
-  desk: {fileID: 0}
+  desk: {fileID: 593652916}
   numbers: {fileID: 1010088499}
   instructions: {fileID: 1058030585}
   circleInstructions: {fileID: 8300000, guid: f9c882014b69446a3a0c20227fbb24c2, type: 3}
-  incorrectCircle: {fileID: 8300000, guid: 9a57746ee2fd34300a69e262ab82d6c0, type: 3}
+  circleOne: {fileID: 8300000, guid: 5c144e73637d04341babbd8607e4a28a, type: 3}
+  circleTwo: {fileID: 8300000, guid: e0ca190d14a944ca0ba7954a103bed12, type: 3}
+  circleThree: {fileID: 8300000, guid: 8f88f88d4f8bf4bafbf0c9e4b615d5e7, type: 3}
+  circleFour: {fileID: 8300000, guid: 7fa3903daa53944f3bc58e4fc940c20e, type: 3}
+  circleFive: {fileID: 8300000, guid: f0e269d2c2da24cf988b58fe544eb1a6, type: 3}
+  circleSix: {fileID: 8300000, guid: c151033075d144e609c0bfee3299c7e3, type: 3}
   pencilPlacementInstructions: {fileID: 8300000, guid: fd89e20411bd74be098fa16bac09f9d6, type: 3}
 --- !u!82 &283311190
 AudioSource:
@@ -960,24 +965,6 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
---- !u!114 &283311192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 283311188}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 604d0868f09af43d38e013695912990c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  graphite: {fileID: 1653716594}
-  circle: {fileID: 977058414}
-  numbers: {fileID: 1010088499}
-  circleInstructions: {fileID: 8300000, guid: f9c882014b69446a3a0c20227fbb24c2, type: 3}
-  incorrectCircle: {fileID: 8300000, guid: 9a57746ee2fd34300a69e262ab82d6c0, type: 3}
-  pencilPlacementInstructions: {fileID: 8300000, guid: fd89e20411bd74be098fa16bac09f9d6, type: 3}
 --- !u!1001 &307660968
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1639,7 +1626,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 593652917}
-  - component: {fileID: 593652918}
   - component: {fileID: 593652919}
   - component: {fileID: 593652920}
   - component: {fileID: 593652921}
@@ -1664,25 +1650,6 @@ Transform:
   m_Father: {fileID: 1186207384}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &593652918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 593652916}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b00385021b584d6281c4690d3e04ded, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  incorrectPencilPlacement: {fileID: 0}
-  correctPencilPlacement: {fileID: 8300000, guid: b2e877089c31c446bbe6334a00481c95, type: 3}
-  countingStudentsInstructions: {fileID: 8300000, guid: ea0657c8a18ac4e26a64f98e6f11d5f5, type: 3}
-  countingStudents: {fileID: 8300000, guid: 210b9aa79810e47a7b5f731682fb2e60, type: 3}
-  pencil: {fileID: 283311188}
-  numbers: {fileID: 1010088499}
-  desk: {fileID: 593652916}
 --- !u!65 &593652919
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1804,10 +1771,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73365145f5fba4da5a4d9507a4922e48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  incorrectPencilPlacement: {fileID: 8300000, guid: 68e63ad1dcc3f40b587ddd6881be3845, type: 3}
-  correctPencilPlacement: {fileID: 8300000, guid: b2e877089c31c446bbe6334a00481c95, type: 3}
-  countingStudentsInstructions: {fileID: 8300000, guid: ea0657c8a18ac4e26a64f98e6f11d5f5, type: 3}
-  countingStudents: {fileID: 8300000, guid: 210b9aa79810e47a7b5f731682fb2e60, type: 3}
+  incorrectPencilPlacement: {fileID: 8300000, guid: 7df8026942968409b86d9afa7dff153a, type: 3}
+  correctPencilPlacement: {fileID: 8300000, guid: d40379ed3697b4980afe151271790dad, type: 3}
+  countingStudentsInstructions: {fileID: 8300000, guid: d6e30a62cf7fa4b608230032177358ff, type: 3}
+  countingStudents: {fileID: 8300000, guid: c6b9c39925f804432a631bccf742936e, type: 3}
   pencil: {fileID: 283311188}
   numbers: {fileID: 1010088499}
   instructions: {fileID: 1058030585}
@@ -4444,218 +4411,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4527064727974542, guid: 00931e932c93cef48ae2d8cc87408c66, type: 3}
   m_PrefabInstance: {fileID: 1890492798}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1389833820
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1389833821}
-  - component: {fileID: 1389833824}
-  - component: {fileID: 1389833823}
-  - component: {fileID: 1389833822}
-  - component: {fileID: 1389833825}
-  - component: {fileID: 1389833826}
-  m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1389833821
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1389833820}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.043, y: 0.995, z: 0.57}
-  m_LocalScale: {x: 0.2, y: 0.03, z: 0.3}
-  m_Children: []
-  m_Father: {fileID: 1186207384}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1389833822
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1389833820}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1389833823
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1389833820}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1389833824
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1389833820}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1389833825
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1389833820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b00385021b584d6281c4690d3e04ded, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  incorrectPencilPlacement: {fileID: 0}
-  correctPencilPlacement: {fileID: 8300000, guid: b2e877089c31c446bbe6334a00481c95, type: 3}
-  countingStudentsInstructions: {fileID: 8300000, guid: ea0657c8a18ac4e26a64f98e6f11d5f5, type: 3}
-  countingStudents: {fileID: 8300000, guid: 210b9aa79810e47a7b5f731682fb2e60, type: 3}
-  pencil: {fileID: 0}
-  numbers: {fileID: 1010088499}
-  desk: {fileID: 0}
---- !u!82 &1389833826
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1389833820}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b2e877089c31c446bbe6334a00481c95, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1001 &1463428944
 PrefabInstance:
   m_ObjectHideFlags: 0

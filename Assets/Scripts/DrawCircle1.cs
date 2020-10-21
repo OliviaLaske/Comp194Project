@@ -12,7 +12,12 @@ public class DrawCircle1 : MonoBehaviour
     public TextMeshPro instructions;
     AudioSource audioSource;
     public AudioClip circleInstructions;
-    public AudioClip incorrectCircle;
+    public AudioClip circleOne;
+    public AudioClip circleTwo;
+    public AudioClip circleThree;
+    public AudioClip circleFour;
+    public AudioClip circleFive;
+    public AudioClip circleSix;
     public AudioClip pencilPlacementInstructions;
     bool isDrawing = false;
     int counter = 0;
@@ -27,8 +32,6 @@ public class DrawCircle1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // player.GetComponent<CountStudents>().enable = false;
-        // desk.GetComponent<PlacePencil>().enable = false;
         numbers.text = " ";
         instructions.text = "Press right trigger to draw";
         desk.SetActive(false);
@@ -54,7 +57,7 @@ public class DrawCircle1 : MonoBehaviour
                 graphite.GetComponent<TrailRenderer>().enabled = false;
                 if(isDrawing == true)
                 {
-                    audioSource.clip = incorrectCircle;
+                    audioSource.clip = circleOne;
                     audioSource.Play(0);
                     instructions.text = " ";
                     counter = 1;
@@ -75,7 +78,7 @@ public class DrawCircle1 : MonoBehaviour
                 graphite.GetComponent<TrailRenderer>().enabled = false;
                 if(isDrawing == true)
                 {
-                    audioSource.clip = incorrectCircle;
+                    audioSource.clip = circleTwo;
                     audioSource.Play(0);
                     counter = 2;
                 }
@@ -95,7 +98,7 @@ public class DrawCircle1 : MonoBehaviour
                 graphite.GetComponent<TrailRenderer>().enabled = false;
                 if(isDrawing == true)
                 {
-                    audioSource.clip = incorrectCircle;
+                    audioSource.clip = circleThree;
                     audioSource.Play(0);
                     counter = 3;
                 }
@@ -115,7 +118,7 @@ public class DrawCircle1 : MonoBehaviour
                 graphite.GetComponent<TrailRenderer>().enabled = false;
                 if(isDrawing == true)
                 {
-                    audioSource.clip = incorrectCircle;
+                    audioSource.clip = circleFour;
                     audioSource.Play(0);
                     counter = 4;
                 }
@@ -135,7 +138,7 @@ public class DrawCircle1 : MonoBehaviour
                 graphite.GetComponent<TrailRenderer>().enabled = false;
                 if(isDrawing == true)
                 {
-                    audioSource.clip = incorrectCircle;
+                    audioSource.clip = circleFive;
                     audioSource.Play(0);
                     counter = 5;
                 }
@@ -155,7 +158,7 @@ public class DrawCircle1 : MonoBehaviour
                 graphite.GetComponent<TrailRenderer>().enabled = false;
                 if(isDrawing == true)
                 {
-                    audioSource.clip = incorrectCircle;
+                    audioSource.clip = circleSix;
                     audioSource.Play(0);
                     counter = 6;
                 }

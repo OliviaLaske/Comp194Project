@@ -10,7 +10,6 @@ public class PlacePencil1 : MonoBehaviour
     public AudioClip correctPencilPlacement;
     public AudioClip countingStudentsInstructions;
     public AudioClip countingStudents;
-    // public GameObject player; 
     public GameObject pencil;
     bool isPencilPlaced = false;
     public TextMeshPro numbers;
