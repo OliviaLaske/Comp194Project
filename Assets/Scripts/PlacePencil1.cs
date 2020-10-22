@@ -17,6 +17,7 @@ public class PlacePencil1 : MonoBehaviour
     public TextMeshPro instructions;
     public GameObject desk;
     int counter = 0;
+    int totalCounter = 0;
 
     IEnumerator WaitForSeconds()
     {
@@ -92,11 +93,13 @@ public class PlacePencil1 : MonoBehaviour
             else if(counter == 5 && OVRInput.GetDown(OVRInput.Button.One))
             {
                 numbers.text = "6";
-                counter = 6;
+                counter = 0;
                 audioSource.clip = countingStudents;
                 audioSource.Play(0);
+                totalCounter++;
             }
-            else if(counter == 6 && OVRInput.GetDown(OVRInput.Button.One))
+            
+            if(totalCounter == 5 && OVRInput.GetDown(OVRInput.Button.One))
             {
                 instructions.text = "Task completed";
                 audioSource.clip = countingStudentsEnd;
