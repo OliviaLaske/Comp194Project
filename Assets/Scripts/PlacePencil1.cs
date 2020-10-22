@@ -10,6 +10,7 @@ public class PlacePencil1 : MonoBehaviour
     public AudioClip correctPencilPlacement;
     public AudioClip countingStudentsInstructions;
     public AudioClip countingStudents;
+    public AudioClip countingStudentsEnd;
     public GameObject pencil;
     bool isPencilPlaced = false;
     public TextMeshPro numbers;
@@ -91,8 +92,14 @@ public class PlacePencil1 : MonoBehaviour
             else if(counter == 5 && OVRInput.GetDown(OVRInput.Button.One))
             {
                 numbers.text = "6";
-                counter = 0;
+                counter = 6;
                 audioSource.clip = countingStudents;
+                audioSource.Play(0);
+            }
+            else if(counter == 6 && OVRInput.GetDown(OVRInput.ButtonOne))
+            {
+                instructions.text = "Task completed";
+                audioSource.clip = countingStudentsEnd;
                 audioSource.Play(0);
             }
         }
