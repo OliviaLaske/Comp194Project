@@ -29,7 +29,10 @@ GraphicsSettings:
     m_Mode: 1
     m_Shader: {fileID: 102, guid: 0000000000000000f000000000000000, type: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_VideoShadersIncludeMode: 2
+=======
+>>>>>>> parent of 98b39b3... Fixed animations.
 =======
 >>>>>>> parent of 98b39b3... Fixed animations.
   m_AlwaysIncludedShaders:
@@ -40,9 +43,15 @@ GraphicsSettings:
   - {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
   - {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 10783, guid: 0000000000000000f000000000000000, type: 0}
   m_PreloadedShaders: []
   m_SpritesDefaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+=======
+  m_PreloadedShaders: []
+  m_SpritesDefaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000,
+    type: 0}
+>>>>>>> parent of 98b39b3... Fixed animations.
 =======
   m_PreloadedShaders: []
   m_SpritesDefaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000,
@@ -71,6 +80,10 @@ GraphicsSettings:
   m_LightsUseColorTemperature: 0
   m_LogWhenShaderIsCompiled: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  m_AllowEnlightenSupportForUpgradedProject: 0
+>>>>>>> parent of 98b39b3... Fixed animations.
 =======
   m_AllowEnlightenSupportForUpgradedProject: 0
 >>>>>>> parent of 98b39b3... Fixed animations.
