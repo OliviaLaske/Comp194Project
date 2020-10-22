@@ -99,9 +99,10 @@ public class PlacePencil1 : MonoBehaviour
                 totalCounter++;
             }
             
-            if(totalCounter == 5 && OVRInput.GetDown(OVRInput.Button.One))
+            if(totalCounter > 5 && OVRInput.GetDown(OVRInput.Button.One))
             {
                 instructions.text = "Task completed";
+                numbers.text = " ";
                 audioSource.clip = countingStudentsEnd;
                 audioSource.Play(0);
             }
