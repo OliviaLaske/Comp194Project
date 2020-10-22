@@ -1092,7 +1092,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 43f0bb95ffafb448887c6c3730ee155d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.9
+      value: 1.94
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 43f0bb95ffafb448887c6c3730ee155d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2780,7 +2780,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: e53f95da8d6184b75b4a2e0714698dfe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.1
+      value: -2.115
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e53f95da8d6184b75b4a2e0714698dfe, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3599,7 +3599,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.109, y: 0.827}
+  m_AnchoredPosition: {x: 4.109, y: 0.762}
   m_SizeDelta: {x: 5, y: 0.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &1098518311 stripped
@@ -3865,7 +3865,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: e0e6723a707a64202939e71613b680e5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.9
+      value: 1.959
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e0e6723a707a64202939e71613b680e5, type: 3}
       propertyPath: m_LocalPosition.y
