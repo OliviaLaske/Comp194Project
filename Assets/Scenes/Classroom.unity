@@ -1893,6 +1893,7 @@ MonoBehaviour:
   correctPencilPlacement: {fileID: 8300000, guid: d40379ed3697b4980afe151271790dad, type: 3}
   countingStudentsInstructions: {fileID: 8300000, guid: d6e30a62cf7fa4b608230032177358ff, type: 3}
   countingStudents: {fileID: 8300000, guid: c6b9c39925f804432a631bccf742936e, type: 3}
+  countingStudentsEnd: {fileID: 8300000, guid: b73bcb91a0b254e4191657f2f16a48b2, type: 3}
   pencil: {fileID: 283311188}
   numbers: {fileID: 1010088499}
   instructions: {fileID: 1058030585}

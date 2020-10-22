@@ -96,7 +96,7 @@ public class PlacePencil1 : MonoBehaviour
                 audioSource.clip = countingStudents;
                 audioSource.Play(0);
             }
-            else if(counter == 6 && OVRInput.GetDown(OVRInput.ButtonOne))
+            else if(counter == 6 && OVRInput.GetDown(OVRInput.Button.One))
             {
                 instructions.text = "Task completed";
                 audioSource.clip = countingStudentsEnd;
